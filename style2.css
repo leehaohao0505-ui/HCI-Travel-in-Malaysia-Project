@@ -85,6 +85,8 @@
   flex: 0 0 40%;              /* image width */
 }
 
+
+
 .gallery-item img {
   width: 50%;
   display: block;
@@ -120,6 +122,43 @@
   padding: 20px;
   border-radius: 10px;
 }
+/* ================= SLIDESHOW ================= */
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+    display: flex;
+  justify-content: center;   /* center image horizontally */
+  align-items: center;       /* center vertically */
+}
+
+.slide {
+  width: 80%;
+  display: none;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 50%;
+}
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 
 /* ================= FOOTER ================= */
 

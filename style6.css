@@ -66,7 +66,30 @@
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* shadow */
 }
 }
- 
+ /* Image + text side-by-side */
+.hotel-flex {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Left image */
+.hotel-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Right text */
+.hotel-text {
+  flex: 1;
+  background-color: #e8f1ff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
 
 /* ================= TRIP GRID (FLEXBOX) ================= */
 .trip-grid {
@@ -74,6 +97,7 @@
   flex-wrap: wrap;
   gap: 30px;
   align-items: flex-start;
+  
 }
 
 /* Each card = column */
@@ -85,10 +109,18 @@
 }
 
 /* Images */
+ .trip-card {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ⭐ centers image + overlay */
+  gap: 10px;
+}
+
 .trip-card img {
-  width: 30%;
+  width: 60%;            /* bigger & centered */
   height: auto;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 /* Caption text */
@@ -106,7 +138,7 @@
   font-size: 16px;
 }
 .about-text p {
-  font-size: 100px;   /* BIG */
+  font-size: 30px;   /* BIG */
 
 }
   .stars {
@@ -117,7 +149,27 @@
  background-color: #e8f1ff;
   padding: 20px;
   border-radius: 10px;
+
 }
+  .about-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+.big-image {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+
+
 
 
 
@@ -149,12 +201,7 @@
   .main {
     padding: 30px 20px;
   }
-
-  .trip-card {
-    flex: 100%;                 /* 1 column on mobile */
-  }
-
-  .footer {
+ .footer {
     flex-direction: column;
     gap: 20px;
     text-align: center;
@@ -164,3 +211,58 @@
     text-align: center;
   }
 }
+/* ===== MODAL POPUP ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  width: 70%;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+}
+
+.modal-content img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.modal-info {
+  width: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+.facility-title {
+  width: 100%;
+  text-align: center;     /* ⭐ center text */
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0 10px;
+
+}
+.stars {
+  width: 100%;
+  text-align: center;
+  color: gold;
+  font-size: 20px;
+}
+
+

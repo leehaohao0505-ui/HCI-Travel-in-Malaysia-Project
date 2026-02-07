@@ -36,7 +36,17 @@
 .slideshow-container {
   position: relative;
   max-width: 600px;
-  margin: auto;
+  margin:40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;         /* Full container width */
+  display: none;
+  border-radius: 12px;
+}
 }
 
 .slide {
@@ -51,13 +61,14 @@
   background: rgba(0,0,0,0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   font-size: 20px;
+  border-radius:50%;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
 
 
